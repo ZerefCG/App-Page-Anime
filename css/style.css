@@ -38,7 +38,7 @@ img{
 .container-center{
     width: 100%;
     height: 100%;
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
     background-color: var(--color-white-light);
 }
 
@@ -51,7 +51,7 @@ img{
 
 .grid{
     display: grid;
-    grid-template-columns: 5% 95%;
+    grid-template-columns: 8rem 1fr;
 }
 
 
@@ -383,10 +383,12 @@ img{
 
 @media screen and (max-width: 624px){
     
-   .grid{
-    display: grid;
-    grid-template-columns: 10% 90%;
+    /* size of navbar and main content containers */
+
+    .grid{
+        grid-template-columns: 5rem 1fr;
     }
+
     /* main options column */
     .main__options{
         flex-direction: column-reverse;
