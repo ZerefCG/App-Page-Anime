@@ -34,6 +34,11 @@ img{
    
 }
 
+ul{
+    padding: 0;
+    list-style: none;
+}
+
 /* styles general */
 .container-center{
     width: 100%;
@@ -54,6 +59,7 @@ img{
     display: grid;
     grid-template-columns: 8rem 1fr;
 }
+
 
 
 /* HEADER STYLES */
@@ -212,15 +218,70 @@ img{
     justify-content: space-between;
 }
 
-.popular__select{
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    background-color: var(--color-black-light);
+/*=============== DROP DOWN MENU  ===============*/
+.select{
+    font-size: 1.6rem;  
+    /* transition: 0.2s ease-in-out; */
+    position: relative; /*for contain the nesting ul*/
     color: var(--color-white-light);
-    border: none;
-    border-radius: 2rem;
-  
  }
+
+/* MENU LI AND A STYLES */
+
+.menu__a{
+    color: inherit;
+    padding: 2rem;
+    display: flex;
+    gap: 0.7rem;
+    background-color: var(--color-black-light);
+    border-radius: 1.5rem;
+    /* transition: 0.2s ease-in-out; */
+}
+
+/* position the icon of arrow with relative */
+.menu__icon{
+    position: relative;
+    bottom: 0.3rem;
+    font-size: 1.8rem;
+}
+
+/* DROP DOWN STYLES */
+.drop-down{
+    top: 1rem;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    width:100%;
+    /* min-height: 100%; */
+    background-color: var(--color-black-light);
+    transition: 0.3s all;
+    visibility: hidden;
+    opacity:0;
+    z-index: 2;
+    border-radius: 0 0 1.5rem 1.5rem;
+    text-align: center;
+ }
+
+/* SHOW THE MENU */
+.menu__li:hover .drop-down{
+    visibility: visible;
+    opacity: 1;
+    top: 4.5rem;
+ }
+
+ /* DROPDOWN  LI STYLES*/
+.drop-down__li{
+    padding: 0.8rem 1rem;
+    transition: 0.2s ease-in-out;
+ }
+ .drop-down__a{
+    color: inherit;
+}
+
+ .drop-down__li:hover{
+    background-color: #80808c;
+ }
+
  
  /* POPULAR ARTICLES STYLES ON GRID OR FLEX ANYWAYS*/
  .section__articles--grid4-col{
