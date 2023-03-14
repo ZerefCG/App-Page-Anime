@@ -322,7 +322,7 @@ img{
 .article__p{
     font-size: 1.6rem;
     flex-grow: 1;/*SET BUTTON ON BOTTOM*/
-    margin-top: 2rem;
+    margin: 2rem 0;
    
 }
 
