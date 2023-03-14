@@ -42,9 +42,10 @@ img{
     background-color: var(--color-white-light);
 }
 
+/* 
 .header, .main{
-    /* border: 1px solid red; */ /*comment when finish it*/
-}
+    border: 1px solid red; comment when finish it
+} */
 
 
 /* GRID STYLES */
