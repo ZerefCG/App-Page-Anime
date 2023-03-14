@@ -1,0 +1,403 @@
+
+/*=============== CUSTOM PROPERTIES===============*/
+
+:root{
+    --color-orange:#da3a21;
+    --color-black-light:#080519;
+    --linear-gradient-hero:
+    linear-gradient(to top right, rgba(0,0,0), rgba(0,0,0,0.4), transparent);
+    --color-white-light:#fafafa;
+    --color-gray:#80808c;
+    --color-gray-lighter:#dedede;
+    --box-shadow:2px 2px 9px rgba(0,0,0,0.5);
+    --border-radius:1rem;
+}
+
+html{font-size: 62.5%;}
+
+
+body{
+    font-family: 'Roboto';
+    background-color: var(--color-black-light);
+  
+    min-height: 100vh;
+    
+}
+
+a{text-decoration: none;}
+
+figure{
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+   
+}
+
+/* styles general */
+.container-center{
+
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem;
+    background-color: var(--color-white-light);
+}
+
+.header, .main{
+    /* border: 1px solid red; */
+}
+
+
+/* GRID STYLES */
+
+.grid{
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
+
+
+/* HEADER STYLES */
+
+header{
+    padding: 1.6rem 0.5rem;
+    font-size: 2rem;
+    /* background-color: var(--color-black-light); */
+    color: var(--color-white-light);
+}
+
+header, .nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+   
+}
+
+/* ICONS ON HEADER STYLES */
+
+.nav__a{
+    color: inherit;
+    padding:1rem 1.5rem;
+    transition: 0.2s ease-in-out;
+    border-radius: 6px;
+    /* border: 2px solid red; */
+}
+
+.nav__a:hover{
+    background-color: var(--color-white-light);
+    color: var(--color-black-light);
+ 
+}
+
+/* PROFILE STYLES USED AGAIN ON OTHER SECTION */
+
+.profile{
+    width: 5rem;
+    height: 5rem;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+}
+
+/*=============== MAIN ITEMS STYLES ===============*/
+
+/* OPTIONS ON MAIN, SEARCH BAR ETC */
+
+.main__options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* SEARCH OPTION */
+.search{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search__icon{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color-black-light);
+}
+
+.search__input{
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--color-gray);
+    background-color: var(--color-gray-lighter);
+    outline: none;
+    
+}
+
+.search__input:focus{
+    background-color: var(--color-white-light);
+    color: var(--color-black-light);
+    border: 1px solid var(--color-gray);
+}   
+
+/* USER OPTIONS ON LEFT SIDE */
+.user{
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* USER NOTIFICATION */
+.user__icon{
+    position: relative;
+    color: var(--color-gray);
+    transition: 0.2s all;
+}
+
+.user__icon::before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    
+}
+
+.user__icon:hover{
+    color:var(--color-black-light);
+}
+
+
+/*=============== HERO IMAGE ===============*/
+
+.hero{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin:2rem 0;
+    min-height: 35vh;
+    background-image: var(--linear-gradient-hero), url(../img/Bg-herov4.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+}
+
+.hero__h1{
+    font-size: 6rem;
+    color: var(--color-white-light);
+    text-shadow: var(--box-shadow);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*=============== SECTION FONTS ===============*/
+
+.section{
+    margin: 4rem 0;
+}
+
+.section__title{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/* h2 styles, containe and select styles on POPULAR section*/
+
+.popular__options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular__select{
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background-color: var(--color-black-light);
+    color: var(--color-white-light);
+    border: none;
+    border-radius: 2rem;
+  
+ }
+ 
+ /* POPULAR ARTICLES STYLES ON GRID OR FLEX ANYWAYS*/
+ .section__articles--grid4-col{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+ }
+
+ /* article styles */
+ .article{
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    color: var(--color-black-light);
+    min-height: 38rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s ease-in-out;
+ }
+
+ .article:hover{
+    background-color: var(--color-orange);
+    color: var(--color-white-light);
+ }
+
+ .article:hover .article__a{
+    color: var(--color-white-light);
+ }
+
+ /* padding bottom for spacing button of ''watch'' */
+ .article--padding{
+    padding-bottom: 2rem;
+ }
+
+
+ .article__texts{
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+ }
+
+ /* flex grow on paragraphs for set button on bottom */
+ .article__p{
+    flex-grow: 1;
+ }
+
+.article__h3{
+    font-size: 2.7rem;
+    
+  
+}
+
+.article__a{
+    font-size: 2rem;
+    color: var(--color-orange);
+    text-align: center;
+}
+
+.article__a--margin{
+    margin-top: 2rem;
+}
+
+
+ /*articles figure size*/
+
+ .article__figure{
+    height: 20rem;
+ }
+
+ /*=============== SECTION NEW ANIME ===============*/
+
+/* GRID FOR TWO CARDS AND ONE HAVE MORE SIZE THAN OTHER CARD */
+ .section__articles--grid2-col{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+ }
+
+ /* GRID ON NEW ANIME*/
+.article--grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+}
+
+.article__texts--flex{
+    display: flex;
+    /*FLEX FOR FLEX GROW 1 FOR SET BUTTON ON BOTTOM*/
+    flex-direction: column;
+}
+
+.article__p{
+    font-size: 1.6rem;
+    flex-grow: 1;/*SET BUTTON ON BOTTOM*/
+    margin-top: 2rem;
+   
+}
+
+
+.article__figure--size{
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* flex on title of this card for position ''categories'' */
+.article__h3--flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article__span{
+    font-size: 1.4rem;
+    color: var(--color-white-light);
+    background-color: var(--color-orange);
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+}
+
+
+/*=============== MEDIA QUERIES ===============*/
+
+@media screen and (max-width: 1024px){
+    
+    /* popular section */
+    .section__articles--grid4-col{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* section new anime */
+    .section__articles--grid2-col{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .article--grid {
+        display: grid;
+        grid-template-columns: 1fr;}
+
+    .hero{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* for 624px */
+
+@media screen and (max-width: 624px){
+    
+   .grid{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    }
+    /* main options column */
+    .main__options{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    /* hero title change size font */
+    .hero__h1{
+        font-size: 4rem;
+        
+    }
+    /* popular section */
+    .section__articles--grid4-col,
+    /* section new anime */ 
+    .section__articles--grid2-col{
+        grid-template-columns: 1fr;
+    }
+  
+    
+      
+}
