@@ -268,7 +268,7 @@ ul{
     transition: 0.3s all;
     visibility: hidden;
     opacity:0;
-    z-index: 2;
+    z-index: -1;
     border-radius: 0 0 1.5rem 1.5rem;
     text-align: center;
  }
@@ -278,6 +278,7 @@ ul{
     visibility: visible;
     opacity: 1;
     top: 4.5rem;
+    z-index: 1;
  }
 
  /* DROPDOWN "A" STYLES*/
