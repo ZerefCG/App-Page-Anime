@@ -228,13 +228,14 @@ ul{
 
 /* MENU LI AND A STYLES */
 
-.menu__a{
+.menu__li{
     color: inherit;
     padding: 2rem;
     display: flex;
     gap: 0.7rem;
     background-color: var(--color-black-light);
     border-radius: 1.5rem;
+    cursor: pointer;
     /* transition: 0.2s ease-in-out; */
 }
 
@@ -402,12 +403,18 @@ ul{
     align-items: center;
 }
 
+/* effect hover of categories of anime(Action, comedy, etc) */
 .article__span{
     font-size: 1.4rem;
     color: var(--color-white-light);
     background-color: var(--color-orange);
     padding: 0.8rem 1.5rem;
     border-radius: 2rem;
+}
+
+.article:hover .article__span{
+    background-color: var(--color-white-light);
+    color: var(--color-orange);
 }
 
 
