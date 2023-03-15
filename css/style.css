@@ -12,7 +12,10 @@
     --border-radius:1rem;
 }
 
-html{font-size: 62.5%;}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 
 
 body{
@@ -69,13 +72,20 @@ ul{
     font-size: 2rem;
     background-color: var(--color-black-light);
     color: var(--color-white-light);
+    /* position: relative; */
+    min-height: 100%;
 }
 
-.header, .nav{
+.position-sticky, .nav{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+}
+
+.position-sticky{
+    position: sticky;/*NOTE IF U WANT USE STICKY POSITION, NEED FATHER WITH A HEIGHT OR MIN HEIGHT, HEIGHT ON 100% ETC*/
+    top: 2rem;
 }
 
 
@@ -235,7 +245,7 @@ ul{
     gap: 0.7rem;
     background-color: var(--color-black-light);
     border-radius: 1.5rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     /* transition: 0.2s ease-in-out; */
 }
 
